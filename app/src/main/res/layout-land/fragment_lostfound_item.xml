@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="25dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="25dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="25dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="25dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="87dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="376dp"
+            android:text="@string/lostfoundTitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <EditText
+            android:id="@+id/item_title"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="122dp"
+            android:ems="10"
+            android:hint="@string/hint_title"
+            android:inputType="text"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+        <ImageView
+            android:id="@+id/item_photo"
+            android:layout_width="116dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_photo"
+            app:layout_constraintEnd_toStartOf="@+id/item_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/guideline6"
+            app:srcCompat="@drawable/ic_image" />
+
+        <ImageButton
+            android:id="@+id/btn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/item_photo"
+            app:srcCompat="@drawable/ic_camera" />
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="87dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="376dp"
+            android:text="@string/details"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/item_title" />
+
+        <CheckBox
+            android:id="@+id/item_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/found"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/btn_photo" />
+
+        <Button
+            android:id="@+id/lost_date"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="120dp"
+            android:backgroundTint="#5461BC"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_details" />
+
+        <Button
+            android:id="@+id/lost_time"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:backgroundTint="#289894"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/lost_date" />
+
+        <EditText
+            android:id="@+id/lostLocation"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:ems="10"
+            android:hint="@string/location"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/lost_time" />
+
+        <EditText
+            android:id="@+id/comment"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="50dp"
+            android:ems="10"
+            android:hint="@string/comment"
+            android:inputType="text|textMultiLine|textLongMessage"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/lostLocation" />
+
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="179dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#60d384"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/item_found" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:layout_margin="30dp"-->
+    <!--    android:orientation="vertical">-->
+
+    <!--<TextView-->
+    <!--    style="?android:listSeparatorTextViewStyle"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:id="@+id/tv_title"-->
+    <!--    android:text="@string/lostfoundTitle"-->
+    <!--    android:textColor="@color/black"-->
+    <!--    android:textSize="18sp"/>-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/item_title"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="@string/hint_title"-->
+    <!--        android:inputType="text"/>-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/item_photo"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:srcCompat="@drawable/ic_image" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/btn_photo"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="12dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        app:srcCompat="@drawable/ic_camera" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_details"-->
+    <!--        android:textColor="#000"-->
+    <!--        android:textSize="18sp"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:text="@string/details"/>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/lost_date"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:backgroundTint="@color/purple_200"-->
+    <!--        app:srcCompat="@drawable/calender"/>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/lost_time"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:backgroundTint="@color/yellow"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        app:srcCompat="@drawable/calender" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/lostLocation"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="@string/location"-->
+    <!--        android:inputType="textPersonName" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/comment"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="@string/comment"-->
+    <!--        android:inputType="text|textMultiLine|textLongMessage" />-->
+
+    <!--    <CheckBox-->
+    <!--        android:id="@+id/item_found"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="49dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:text="@string/found"-->
+    <!--        android:textSize="17sp"/>-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_save"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:text="Save"-->
+    <!--        android:backgroundTint="#3C4461"-->
+    <!--        android:textColor="@color/white" />-->
+
+    <!--</LinearLayout>-->

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">LOFO</string>
+    <string name="welcome">Welcome to LOFO</string>
+    <string name="description">Welcome to LOFO, a Lost and Found app to report found goods, helping reunite lost items with owners effortlessly.</string>
+    <string name="start">Start</string>
+    <string name="lostfoundTitle">Title</string>
+    <string name="hint_title">Enter title</string>
+    <string name="details">Details</string>
+    <string name="location">Enter location</string>
+    <string name="comment">Any comment</string>
+    <string name="found">Item Found</string>
+    <string name="date_picker_title">Date Item Lost</string>
+    <string name="time_picker_title">Time Item Lost</string>
+    <string name="hide_subtitle" />
+    <string name="show_subtitle" />
+
+    <plurals name="item_subtitle_plural">
+        <item quantity="zero">%1$d item</item>
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+</resources>
